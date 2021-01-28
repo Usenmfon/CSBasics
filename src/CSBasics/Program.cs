@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Internal;
+using System;
 
 namespace CSBasics
 {
@@ -9,6 +10,11 @@ namespace CSBasics
             Console.WriteLine("Hello World!");
             string fresh = "from fresh";
             Console.WriteLine($"Learning Basics {fresh}");
+
+            Console.WriteLine(@"This text 
+                        will 
+                        stand 
+                        as it is");
         }
     }
 }
