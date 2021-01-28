@@ -7,6 +7,8 @@ namespace CSBasics
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            string fresh = "from fresh";
+            Console.WriteLine($"Learning Basics {fresh}");
         }
     }
 }
