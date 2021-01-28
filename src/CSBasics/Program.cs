@@ -1,4 +1,4 @@
-﻿using Internal;
+﻿using System.Data;
 using System;
 
 namespace CSBasics
@@ -15,6 +15,10 @@ namespace CSBasics
                         will 
                         stand 
                         as it is");
+            string one = "1";
+            string two = "2";
+
+            Console.WriteLine("{0} + {1}",0,1);
         }
     }
 }
