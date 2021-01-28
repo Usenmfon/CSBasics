@@ -18,7 +18,7 @@ namespace CSBasics
             string one = "1";
             string two = "2";
 
-            Console.WriteLine("{0} + {1}",0,1);
+            Console.WriteLine("{0} + {1}",one,two);
         }
     }
 }
