@@ -3,14 +3,14 @@ using System;
 
 namespace CSBasics
 {
-    class Program
+    class CSBasics
     {
         static void Main(string[] args)
         {
             double width, height, woodLength, glassArea;
             string widthString, heightString;
 
-            Console.WriteLine("Input details here");
+            Comments.SayThis();
             widthString = Console.ReadLine();
             width = double.Parse(widthString);
 
