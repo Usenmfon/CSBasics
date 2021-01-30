@@ -6,7 +6,7 @@ namespace CSBasics
     {
         public static void SayThis()
         {
-           Console.WriteLine("Input details here");
+           Console.WriteLine("Input details here: ");
         }
     }
 }
