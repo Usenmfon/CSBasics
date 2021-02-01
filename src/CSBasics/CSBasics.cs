@@ -38,12 +38,21 @@ namespace CSBasics
             //     woodLength + " feet");
             // Console.WriteLine ( "The area of the glass is " +
             //     glassArea + " square metres");
+
+            int[,] numbers = new int[,] {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+            };
+            Console.WriteLine(numbers[2,2]);
+
             double windowWidth = UsefulMethod.ReadValue(
                 "Enter width of window: ", UsefulMethod.MIN_WIDTH, UsefulMethod.MAX_WIDTH);
             Console.WriteLine("Width: " + windowWidth);
 
             double age = UsefulMethod.ReadValue("Enter your age: ", 0, 70);
             Console.WriteLine("Age: " + age);
+
         }
     }
 }
