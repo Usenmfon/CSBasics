@@ -44,7 +44,15 @@ namespace CSBasics
                 {4,5,6},
                 {7,8,9}
             };
-            Console.WriteLine(numbers[2,2]);
+            var val = 0;
+            for(int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for(int j = 0; j < numbers.GetLength(1); j++)
+                {
+                    val = numbers[i,j];
+                }
+                Console.WriteLine(val);
+            }
 
             double windowWidth = UsefulMethod.ReadValue(
                 "Enter width of window: ", UsefulMethod.MIN_WIDTH, UsefulMethod.MAX_WIDTH);
