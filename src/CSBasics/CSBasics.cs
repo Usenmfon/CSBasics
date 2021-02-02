@@ -31,13 +31,8 @@ namespace CSBasics
             //      height = double.Parse(heightString);
             // } while ( height < MIN_HEIGHT ||height > MAX_HEIGHT );
 
-            // woodLength = 2 * ( width + height) * 3.25;
-            // glassArea = 2 * ( width * height );
 
-            // Console.WriteLine ( "The length of the wood is " +
-            //     woodLength + " feet");
-            // Console.WriteLine ( "The area of the glass is " +
-            //     glassArea + " square metres");
+            double woodLength, glassArea;
 
             double windowWidth = UsefulMethod.ReadValue(
                 "Enter width of window: ", UsefulMethod.MIN_WIDTH, UsefulMethod.MAX_WIDTH);
@@ -46,6 +41,14 @@ namespace CSBasics
             double windowHeight =  UsefulMethod.ReadValue(
                 "Enter height of window: ", UsefulMethod.MIN_HEIGHT, UsefulMethod.MAX_HEIGHT);
             Console.WriteLine("Height: " + windowHeight);
+
+            woodLength = 2 * ( windowWidth + windowHeight) * 3.25;
+            glassArea = 2 * ( windowWidth * windowHeight );
+
+            Console.WriteLine ( "The length of the wood is " +
+                woodLength + " feet");
+            Console.WriteLine ( "The area of the glass is " +
+                glassArea + " square metres");
            
         }
     }
