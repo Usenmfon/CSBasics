@@ -18,5 +18,7 @@ namespace CSBasics
         }
         public const double MAX_WIDTH = 5.0;
         public const double MIN_WIDTH = 0.5;
+        public const double MAX_HEIGHT = 3.0 ;
+        public const double MIN_HEIGHT = 0.75 ;
     }
 }

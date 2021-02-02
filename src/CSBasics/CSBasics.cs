@@ -39,40 +39,14 @@ namespace CSBasics
             // Console.WriteLine ( "The area of the glass is " +
             //     glassArea + " square metres");
 
-            // int[,] numbers = new int[,] {
-            //     {1,2,3},
-            //     {4,5,6},
-            //     {7,8,9}
-            // };
-            // var val = 0;
-            // for(int i = 0; i < numbers.GetLength(0); i++)
-            // {
-            //     for(int j = 0; j < numbers.GetLength(1); j++)
-            //     {
-            //         val = numbers[i,j];
-            //     }
-            //     Console.WriteLine(val);
-            // }
+            double windowWidth = UsefulMethod.ReadValue(
+                "Enter width of window: ", UsefulMethod.MIN_WIDTH, UsefulMethod.MAX_WIDTH);
+            Console.WriteLine("Width: " + windowWidth);
 
-            // double windowWidth = UsefulMethod.ReadValue(
-            //     "Enter width of window: ", UsefulMethod.MIN_WIDTH, UsefulMethod.MAX_WIDTH);
-            // Console.WriteLine("Width: " + windowWidth);
-
-            // double age = UsefulMethod.ReadValue("Enter your age: ", 0, 70);
-            // Console.WriteLine("Age: " + age);
-
-            int age;
-            Console.WriteLine("Enter your age");
-            string intString = Console.ReadLine();
-            try
-            {
-                age = int.Parse(intString);
-                Console.WriteLine("Thank you for your entry");
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            double windowHeight =  UsefulMethod.ReadValue(
+                "Enter height of window: ", UsefulMethod.MIN_HEIGHT, UsefulMethod.MAX_HEIGHT);
+            Console.WriteLine("Height: " + windowHeight);
+           
         }
     }
 }
