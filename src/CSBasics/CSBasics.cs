@@ -36,6 +36,8 @@ namespace CSBasics
             {
             StreamWriter writer;
             writer = new StreamWriter("file.txt");
+            writer.WriteLine("Hello, My name is Usenmfon Uko");
+            writer.Close();
             }
             catch(Exception e)
             {
