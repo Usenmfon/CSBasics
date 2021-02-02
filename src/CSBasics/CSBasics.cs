@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.IO;
+using System.Data;
 using System;
 
 namespace CSBasics
@@ -31,6 +32,15 @@ namespace CSBasics
             //      height = double.Parse(heightString);
             // } while ( height < MIN_HEIGHT ||height > MAX_HEIGHT );
 
+            try
+            {
+            StreamWriter writer;
+            writer = new StreamWriter("file.txt");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             double woodLength, glassArea;
 
