@@ -7,7 +7,7 @@ namespace CSBasics
 {
     class CSBasics
     {
-        enum AccountState 
+        public enum AccountState 
         {
             New,
             UnderAudit,
@@ -16,7 +16,7 @@ namespace CSBasics
             Closed
         };
 
-        struct Account
+        public struct Account
         {
             public AccountState State;
             public string Name;
@@ -24,6 +24,13 @@ namespace CSBasics
             public int AccountNumber;
             public int Balance;
             public int Overdraft;
+        };
+
+        public static void PrintAccount(Account a)
+        {
+            Console.WriteLine("Name: " + a.Name);
+            Console.WriteLine("Address: " + a.Address);
+            Console.WriteLine("Balance: " + a.Balance);
         }
         static void Main(string[] args)
         {
@@ -88,23 +95,23 @@ namespace CSBasics
             #endregion
 
             #region GlazingInstruct
-            double woodLength, glassArea;
+            // double woodLength, glassArea;
 
-            double windowWidth = UsefulMethod.ReadValue(
-                "Enter width of window: ", UsefulMethod.MIN_WIDTH, UsefulMethod.MAX_WIDTH);
-            Console.WriteLine("Width: " + windowWidth);
+            // double windowWidth = UsefulMethod.ReadValue(
+            //     "Enter width of window: ", UsefulMethod.MIN_WIDTH, UsefulMethod.MAX_WIDTH);
+            // Console.WriteLine("Width: " + windowWidth);
 
-            double windowHeight =  UsefulMethod.ReadValue(
-                "Enter height of window: ", UsefulMethod.MIN_HEIGHT, UsefulMethod.MAX_HEIGHT);
-            Console.WriteLine("Height: " + windowHeight);
+            // double windowHeight =  UsefulMethod.ReadValue(
+            //     "Enter height of window: ", UsefulMethod.MIN_HEIGHT, UsefulMethod.MAX_HEIGHT);
+            // Console.WriteLine("Height: " + windowHeight);
 
-            woodLength = 2 * ( windowWidth + windowHeight) * 3.25;
-            glassArea = 2 * ( windowWidth * windowHeight );
+            // woodLength = 2 * ( windowWidth + windowHeight) * 3.25;
+            // glassArea = 2 * ( windowWidth * windowHeight );
 
-            Console.WriteLine ( "The length of the wood is " +
-                woodLength + " feet");
-            Console.WriteLine ( "The area of the glass is " +
-                glassArea + " square metres");
+            // Console.WriteLine ( "The length of the wood is " +
+            //     woodLength + " feet");
+            // Console.WriteLine ( "The area of the glass is " +
+            //     glassArea + " square metres");
             #endregion
 
             const int MAX_CUST = 50;
@@ -116,9 +123,15 @@ namespace CSBasics
             string [] balances = new string [MAX_CUST];
             string [] overdraft = new string [MAX_CUST];
 
-            Account RobsAccount;
-            RobsAccount.State = AccountState.Active;
-            RobsAccount.Balance = 1000000000;
+           const int MAX_CUS = 100;
+           Account[] Bank =  new Account[MAX_CUS];
+           Bank[0].Name = "Rob";
+           Bank[0].State = AccountState.Active;
+           Bank[0].Balance = 100000;
+           Bank[1].Name = "Jim";
+           Bank[1].State = AccountState.Frozen;
+           Bank[1].Balance = 0;
+           PrintAccount(Bank[1]);
         }
     }
 }
