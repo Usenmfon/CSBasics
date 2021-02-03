@@ -31,13 +31,27 @@ namespace CSBasics
             //      heightString = Console.ReadLine();
             //      height = double.Parse(heightString);
             // } while ( height < MIN_HEIGHT ||height > MAX_HEIGHT );
-
+            #region STREAMWRITER
+            // try
+            // {
+            // StreamWriter writer;
+            // writer = new StreamWriter("file.txt");
+            // writer.WriteLine("Hello, My name is Usenmfon Uko");
+            // writer.Close();
+            // }
+            // catch(Exception e)
+            // {
+            //     Console.WriteLine(e.Message);
+            // }
+            #endregion
+            
             try
             {
-            StreamWriter writer;
-            writer = new StreamWriter("file.txt");
-            writer.WriteLine("Hello, My name is Usenmfon Uko");
-            writer.Close();
+            StreamReader reader;
+            reader = new StreamReader("file.txt");
+            string line = reader.ReadLine();
+            Console.WriteLine(line);
+            reader.Close();
             }
             catch(Exception e)
             {
