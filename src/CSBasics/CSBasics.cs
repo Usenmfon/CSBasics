@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.IO;
 using System.Data;
 using System;
 
@@ -6,15 +7,17 @@ namespace CSBasics
 {
     class CSBasics
     {
-        enum TrafficLight 
+        enum AccountState 
         {
-            red,
-            redAmber,
-            Green,
-            Amber
+            New,
+            UnderAudit,
+            Active,
+            Frozen,
+            Closed
         };
         static void Main(string[] args)
         {
+            #region GlazingCompany
             // double width, height, woodLength, glassArea;
 
             // const double MAX_WIDTH = 5.0 ;
@@ -38,11 +41,8 @@ namespace CSBasics
             //      heightString = Console.ReadLine();
             //      height = double.Parse(heightString);
             // } while ( height < MIN_HEIGHT ||height > MAX_HEIGHT );
+            #endregion            
             
-            TrafficLight light;
-            light = TrafficLight.red;
-            Console.WriteLine(light);
-
             #region STREAMWRITER
             // try
             // {
@@ -58,25 +58,26 @@ namespace CSBasics
             #endregion
             
             #region STREAMREADER
-            try
-            {
-            string path;
-            path = @"C:\Users\Usenmfon\Desktop\2019 useful website.txt";
-            StreamReader reader;
-            reader = new StreamReader(path);
-            while(reader.EndOfStream == false)
-            {
-                string line = reader.ReadLine();
-                Console.WriteLine(line);
-            }
-            reader.Close();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            // try
+            // {
+            // string path;
+            // path = @"C:\Users\Usenmfon\Desktop\2019 useful website.txt";
+            // StreamReader reader;
+            // reader = new StreamReader(path);
+            // while(reader.EndOfStream == false)
+            // {
+            //     string line = reader.ReadLine();
+            //     Console.WriteLine(line);
+            // }
+            // reader.Close();
+            // }
+            // catch(Exception e)
+            // {
+            //     Console.WriteLine(e.Message);
+            // }
             #endregion
 
+            #region GlazingInstruct
             double woodLength, glassArea;
 
             double windowWidth = UsefulMethod.ReadValue(
@@ -94,7 +95,16 @@ namespace CSBasics
                 woodLength + " feet");
             Console.WriteLine ( "The area of the glass is " +
                 glassArea + " square metres");
-           
+            #endregion
+
+            const int MAX_CUST = 50;
+
+            AccountState [] states = new AccountState [MAX_CUST];
+            string [] names =  new string [MAX_CUST];
+            string [] addresses = new string [MAX_CUST];
+            string [] accountNos = new string [MAX_CUST];
+            string [] balances = new string [MAX_CUST];
+            string [] overdraft = new string [MAX_CUST];
         }
     }
 }
