@@ -49,8 +49,11 @@ namespace CSBasics
             {
             StreamReader reader;
             reader = new StreamReader("file.txt");
-            string line = reader.ReadLine();
-            Console.WriteLine(line);
+            while(reader.EndOfStream == false)
+            {
+                string line = reader.ReadLine();
+                Console.WriteLine(line);
+            }
             reader.Close();
             }
             catch(Exception e)
