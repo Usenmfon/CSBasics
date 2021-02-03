@@ -6,6 +6,13 @@ namespace CSBasics
 {
     class CSBasics
     {
+        enum TrafficLight 
+        {
+            red,
+            redAmber,
+            Green,
+            Amber
+        };
         static void Main(string[] args)
         {
             // double width, height, woodLength, glassArea;
@@ -31,6 +38,11 @@ namespace CSBasics
             //      heightString = Console.ReadLine();
             //      height = double.Parse(heightString);
             // } while ( height < MIN_HEIGHT ||height > MAX_HEIGHT );
+            
+            TrafficLight light;
+            light = TrafficLight.red;
+            Console.WriteLine(light);
+
             #region STREAMWRITER
             // try
             // {
@@ -45,6 +57,7 @@ namespace CSBasics
             // }
             #endregion
             
+            #region STREAMREADER
             try
             {
             string path;
@@ -62,6 +75,7 @@ namespace CSBasics
             {
                 Console.WriteLine(e.Message);
             }
+            #endregion
 
             double woodLength, glassArea;
 
