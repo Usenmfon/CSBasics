@@ -47,8 +47,10 @@ namespace CSBasics
             
             try
             {
+            string path;
+            path = @"C:\Users\Usenmfon\Desktop\2019 useful website.txt";
             StreamReader reader;
-            reader = new StreamReader("file.txt");
+            reader = new StreamReader(path);
             while(reader.EndOfStream == false)
             {
                 string line = reader.ReadLine();
