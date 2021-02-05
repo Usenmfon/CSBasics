@@ -7,7 +7,27 @@ namespace CSBasics
 {
     class Account
     {
-        public decimal Balance;
+        private decimal balance = 0;
+
+        #region AccountClass
+        public bool WithdrawFunds (decimal amount)
+        {
+            if (balance < amount)
+            {
+                return false;
+            }
+            balance = balance - amount;
+            return true;
+        }
+        public void PayInFunds (decimal amount)
+        {
+            balance = balance + amount;
+        }
+        public decimal GetBalance ()
+        {
+            return balance;
+        }
+        #endregion
         #region ENUMERATION
         //public enum AccountState 
         // {
@@ -148,10 +168,16 @@ namespace CSBasics
             //    Console.WriteLine(bank1);
             #endregion
             
-            Account RobsAccount;
-            RobsAccount = new Account();
-            RobsAccount.Balance = 99;
-            Console.WriteLine(RobsAccount.Balance);
+            Account test = new Account();
+            test.PayInFunds(50);
+            if (test.GetBalance() != 50)
+            {
+                Console.WriteLine("Pay in test failed");
+            }
+            else
+            {
+                Console.WriteLine("Pay in test succeeded");
+            }
         }
     }
 }
