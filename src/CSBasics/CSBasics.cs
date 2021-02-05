@@ -5,33 +5,43 @@ using System;
 
 namespace CSBasics
 {
-    class CSBasics
+    class Account
     {
-        public enum AccountState 
-        {
-            New,
-            UnderAudit,
-            Active,
-            Frozen,
-            Closed
-        };
+        public decimal Balance;
+        #region ENUMERATION
+        //public enum AccountState 
+        // {
+        //     New,
+        //     UnderAudit,
+        //     Active,
+        //     Frozen,
+        //     Closed
+        //};
+        #endregion
 
-        public struct Account
-        {
-            public AccountState State;
-            public string Name;
-            public string Address;
-            public int AccountNumber;
-            public int Balance;
-            public int Overdraft;
-        };
+        
+        #region STRUCTS
+        // public struct Account
+        // {
+        //     public AccountState State;
+        //     public string Name;
+        //     public string Address;
+        //     public int AccountNumber;
+        //     public int Balance;
+        //     public int Overdraft;
+        //};
+        #endregion
 
-        public static void PrintAccount(Account a)
-        {
-            Console.WriteLine("Name: " + a.Name);
-            Console.WriteLine("Address: " + a.Address);
-            Console.WriteLine("Balance: " + a.Balance);
-        }
+        
+        #region STRUCTMETHOD
+        // public static void PrintAccount(Account a)
+        // {
+        //     Console.WriteLine("Name: " + a.Name);
+        //     Console.WriteLine("Address: " + a.Address);
+        //     Console.WriteLine("Balance: " + a.Balance);
+        // }
+        #endregion
+
         static void Main(string[] args)
         {
             #region GlazingCompany
@@ -114,24 +124,34 @@ namespace CSBasics
             //     glassArea + " square metres");
             #endregion
 
-            const int MAX_CUST = 50;
+            #region IMPLEMENTATION
+            //     const int MAX_CUST = 50;
 
-            AccountState [] states = new AccountState [MAX_CUST];
-            string [] names =  new string [MAX_CUST];
-            string [] addresses = new string [MAX_CUST];
-            string [] accountNos = new string [MAX_CUST];
-            string [] balances = new string [MAX_CUST];
-            string [] overdraft = new string [MAX_CUST];
+            //     AccountState [] states = new AccountState [MAX_CUST];
+            //     string [] names =  new string [MAX_CUST];
+            //     string [] addresses = new string [MAX_CUST];
+            //     string [] accountNos = new string [MAX_CUST];
+            //     string [] balances = new string [MAX_CUST];
+            //     string [] overdraft = new string [MAX_CUST];
 
-           const int MAX_CUS = 100;
-           Account[] Bank =  new Account[MAX_CUS];
-           Bank[0].Name = "Rob";
-           Bank[0].State = AccountState.Active;
-           Bank[0].Balance = 100000;
-           Bank[1].Name = "Jim";
-           Bank[1].State = AccountState.Frozen;
-           Bank[1].Balance = 0;
-           PrintAccount(Bank[1]);
+            //    const int MAX_CUS = 100;
+            //    Account[] Bank =  new Account[MAX_CUS];
+            //    Bank[0].Name = "Rob";
+            //    Bank[0].State = AccountState.Active;
+            //    Bank[0].Balance = 100000;
+            //    Bank[1].Name = "Jim";
+            //    Bank[1].State = AccountState.Frozen;
+            //    Bank[1].Balance = 0;
+            //    PrintAccount(Bank[0]);
+            //    Console.WriteLine();
+            //    AccountState bank1 = AccountState.Active;
+            //    Console.WriteLine(bank1);
+            #endregion
+            
+            Account RobsAccount;
+            RobsAccount = new Account();
+            RobsAccount.Balance = 99;
+            Console.WriteLine(RobsAccount.Balance);
         }
     }
 }
