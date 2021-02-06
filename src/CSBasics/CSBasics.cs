@@ -28,7 +28,16 @@ namespace CSBasics
             return balance;
         }
         #endregion
-        
+        public static bool AccountAllowed ( decimal income, int age)
+        {
+            if((income >= 10000) && (age >= 18))
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
         #region ENUMERATION
         //public enum AccountState 
         // {
@@ -169,6 +178,10 @@ namespace CSBasics
             //    Console.WriteLine(bank1);
             #endregion
             
+            if (Account.AccountAllowed (25000, 21))
+            {
+                Console.WriteLine("Allowed Account");
+            }
             Account test = new Account();
             test.PayInFunds(50);
             if (test.GetBalance() != 50)
