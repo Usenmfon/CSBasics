@@ -28,6 +28,7 @@ namespace CSBasics
             return balance;
         }
         #endregion
+        
         #region ENUMERATION
         //public enum AccountState 
         // {
