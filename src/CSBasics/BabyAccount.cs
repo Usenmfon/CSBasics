@@ -1,6 +1,6 @@
 namespace CSBasics
 {
-    public class BabyAccount
+    public class BabyAccount : IAccount
     {
         private decimal balance = 0;
         public bool WithdrawFunds (decimal amount)

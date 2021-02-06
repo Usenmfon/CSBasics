@@ -7,26 +7,26 @@ namespace CSBasics
 {
     class Account
     {
-        private decimal balance = 0;
-
+        //private decimal balance = 0;
+        const int MAX_CUST = 100;
         #region AccountClass
-        public bool WithdrawFunds (decimal amount)
-        {
-            if (balance < amount)
-            {
-                return false;
-            }
-            balance = balance - amount;
-            return true;
-        }
-        public void PayInFunds (decimal amount)
-        {
-            balance = balance + amount;
-        }
-        public decimal GetBalance ()
-        {
-            return balance;
-        }
+        // public bool WithdrawFunds (decimal amount)
+        // {
+        //     if (balance < amount)
+        //     {
+        //         return false;
+        //     }
+        //     balance = balance - amount;
+        //     return true;
+        // }
+        // public void PayInFunds (decimal amount)
+        // {
+        //     balance = balance + amount;
+        // }
+        // public decimal GetBalance ()
+        // {
+        //     return balance;
+        // }
         #endregion
         public static bool AccountAllowed ( decimal income, int age)
         {
@@ -178,23 +178,27 @@ namespace CSBasics
             //    Console.WriteLine(bank1);
             #endregion
             
-            IAccount account =  new CustomerAccount();
-            account.PayInFunds(50);
-            Console.WriteLine("Balance: " + account.GetBalance());
+            IAccount[] accounts = new IAccount[MAX_CUST];
+            accounts[0] = new CustomerAccount();
+            accounts[0].PayInFunds(50);
+            Console.WriteLine("Balance: " + accounts[0].GetBalance());
 
-            if (Account.AccountAllowed (25000, 21))
+            accounts[1] = new BabyAccount();
+            accounts[1].PayInFunds(50);
+            Console.WriteLine("Balance: " + accounts[1].GetBalance());
+
+            if(accounts[0].WithdrawFunds(20))
             {
-                Console.WriteLine("Allowed Account");
+                Console.WriteLine("Withdraw OK");
             }
-            Account test = new Account();
-            test.PayInFunds(50);
-            if (test.GetBalance() != 50)
+
+            if(accounts[1].WithdrawFunds(20))
             {
-                Console.WriteLine("Pay in test failed");
+                Console.WriteLine("Withdraw OK");
             }
             else
             {
-                Console.WriteLine("Pay in test succeeded");
+                Console.WriteLine("Transaction Failed");
             }
         }
     }
