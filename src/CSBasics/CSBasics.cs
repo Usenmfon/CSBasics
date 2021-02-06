@@ -178,6 +178,10 @@ namespace CSBasics
             //    Console.WriteLine(bank1);
             #endregion
             
+            IAccount account =  new CustomerAccount();
+            account.PayInFunds(50);
+            Console.WriteLine("Balance: " + account.GetBalance());
+
             if (Account.AccountAllowed (25000, 21))
             {
                 Console.WriteLine("Allowed Account");
