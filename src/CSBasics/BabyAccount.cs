@@ -2,7 +2,6 @@ namespace CSBasics
 {
     public class BabyAccount : CustomerAccount, IAccount
     {
-        private decimal balance = 0;
         public override bool WithdrawFunds (decimal amount)
         {
             if (amount > 10)

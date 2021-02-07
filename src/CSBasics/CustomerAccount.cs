@@ -2,8 +2,8 @@ namespace CSBasics
 {
     public class CustomerAccount : IAccount
     {
-        private decimal balance = 0;
-        public bool WithdrawFunds (decimal amount)
+        protected decimal balance = 0;
+        public virtual bool WithdrawFunds (decimal amount)
         {
             if (balance < amount)
             {
