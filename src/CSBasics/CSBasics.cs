@@ -178,6 +178,7 @@ namespace CSBasics
             //    Console.WriteLine(bank1);
             #endregion
             
+            #region IAccount
             IAccount[] accounts = new IAccount[MAX_CUST];
             accounts[0] = new CustomerAccount();
             accounts[0].PayInFunds(50);
@@ -200,6 +201,7 @@ namespace CSBasics
             {
                 Console.WriteLine("Transaction Failed");
             }
+            #endregion
         }
     }
 }

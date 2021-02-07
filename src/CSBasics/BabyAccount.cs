@@ -1,9 +1,9 @@
 namespace CSBasics
 {
-    public class BabyAccount : IAccount
+    public class BabyAccount : CustomerAccount, IAccount
     {
         private decimal balance = 0;
-        public bool WithdrawFunds (decimal amount)
+        public override bool WithdrawFunds (decimal amount)
         {
             if (amount > 10)
             {
@@ -15,14 +15,6 @@ namespace CSBasics
             }
             balance = balance - amount;
             return true;
-        }
-        public void PayInFunds (decimal amount)
-        {
-            balance = balance + amount;
-        }
-        public decimal GetBalance ()
-        {
-            return balance;
         }
     }
 }
