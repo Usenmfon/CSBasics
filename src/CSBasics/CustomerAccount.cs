@@ -2,7 +2,7 @@ namespace CSBasics
 {
     public class CustomerAccount : IAccount
     {
-        protected decimal balance = 0;
+        private decimal balance = 0;
         public virtual bool WithdrawFunds (decimal amount)
         {
             if (balance < amount)

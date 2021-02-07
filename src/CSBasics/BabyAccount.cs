@@ -8,12 +8,7 @@ namespace CSBasics
             {
                 return false;
             }
-            if (balance < amount)
-            {
-                return false;
-            }
-            balance = balance - amount;
-            return true;
+            return base.WithdrawFunds(amount);
         }
     }
 }
