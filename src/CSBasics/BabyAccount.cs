@@ -1,6 +1,6 @@
 namespace CSBasics
 {
-    public class BabyAccount : CustomerAccount, IAccount
+    public class BabyAccount : Account
     {
         public override bool WithdrawFunds (decimal amount)
         {
@@ -9,6 +9,10 @@ namespace CSBasics
                 return false;
             }
             return base.WithdrawFunds(amount);
+        }
+        public override string RudeLetterString()
+        {
+            return "Tell daddy you are overdrawn";
         }
     }
 }

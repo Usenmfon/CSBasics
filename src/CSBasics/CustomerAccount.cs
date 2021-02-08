@@ -1,24 +1,10 @@
 namespace CSBasics
 {
-    public class CustomerAccount : IAccount
+    public class CustomerAccount : Account
     {
-        private decimal balance = 0;
-        public virtual bool WithdrawFunds (decimal amount)
+        public override string RudeLetterString()
         {
-            if (balance < amount)
-            {
-                return false;
-            }
-            balance = balance - amount;
-            return true;
-        }
-        public void PayInFunds (decimal amount)
-        {
-            balance = balance + amount;
-        }
-        public decimal GetBalance ()
-        {
-            return balance;
+            return "You are overdrawn";
         }
     }
 }

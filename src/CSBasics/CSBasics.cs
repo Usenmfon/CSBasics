@@ -5,8 +5,27 @@ using System;
 
 namespace CSBasics
 {
-    class Account
+    public abstract class Account : IAccount
     {
+        private decimal balance = 0;
+        public abstract string RudeLetterString();
+        public virtual bool WithdrawFunds (decimal amount)
+        {
+            if (balance < amount)
+            {
+                return false;
+            }
+            balance = balance - amount;
+            return true;
+        }
+        public void PayInFunds (decimal amount)
+        {
+            balance = balance + amount;
+        }
+        public decimal GetBalance ()
+        {
+            return balance;
+        }
         //private decimal balance = 0;
         const int MAX_CUST = 100;
         #region AccountClass
