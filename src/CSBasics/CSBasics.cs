@@ -200,28 +200,7 @@ namespace CSBasics
             
             #region IAccount
             
-            IAccount[] accounts = new IAccount[MAX_CUST];
-            accounts[0] = new CustomerAccount();
-            accounts[0].PayInFunds(50);
-            Console.WriteLine("Balance: " + accounts[0].GetBalance());
-
-            accounts[1] = new BabyAccount();
-            accounts[1].PayInFunds(50);
-            Console.WriteLine("Balance: " + accounts[1].GetBalance());
-
-            if(accounts[0].WithdrawFunds(20))
-            {
-                Console.WriteLine("Withdraw OK");
-            }
-
-            if(accounts[1].WithdrawFunds(20))
-            {
-                Console.WriteLine("Withdraw OK");
-            }
-            else
-            {
-                Console.WriteLine("Transaction Failed");
-            }
+            
             #endregion
         }
     }
