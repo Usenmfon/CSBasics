@@ -26,6 +26,7 @@ namespace CSBasics
         {
             return balance;
         }
+       
         //private decimal balance = 0;
         const int MAX_CUST = 100;
         #region AccountClass
@@ -198,6 +199,7 @@ namespace CSBasics
             #endregion
             
             #region IAccount
+            
             IAccount[] accounts = new IAccount[MAX_CUST];
             accounts[0] = new CustomerAccount();
             accounts[0].PayInFunds(50);
