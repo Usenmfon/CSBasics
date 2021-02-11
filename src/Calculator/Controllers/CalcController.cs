@@ -18,5 +18,19 @@ namespace Calculator.Controllers
             ViewBag.result = addNum;
             return View();
         }
+
+        [HttpGet]
+        public IActionResult TimesT()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult TimesT(string i)
+        {
+            int num = int.Parse(i);
+            ViewBag.result = num;
+            return View();
+        }
     }
 }

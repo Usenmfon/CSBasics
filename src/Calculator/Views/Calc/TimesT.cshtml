@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "TimesTable";
+}
+
+<div class="text-center">
+    <h1 class="display-20">Times</h1>
+</div>
+
+<div>
+    <form asp-controller="Calc" asp-action="TimesT" method="POST">
+    <input type="number" placeholder="number" name="i">
+    <button type="submit">submit</button>
+    </form>
+</div>
+
+@{
+    if(ViewBag.result != null)
+    {
+        <div>
+            @for(int a = 1; a < 13; a++)
+            {
+                <p>@ViewBag.result</p>
+            }
+        </div>
+    }
+}
