@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Summation";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add Up</h1>
+</div>
+
+@{
+    if(ViewBag.result != null)
+    {
+        <div>
+            <p>Answer: @ViewBag.result</p>
+        </div>
+    }
+}
+
+<div>
+    <form asp-controller="Calc" asp-action="Index" method="POST">
+    <input type="number" placeholder="first number" name="firstNumber">
+    <input type="number" placeholder="second number" name="secondNumber">
+    <button type="submit">submit</button>
+    </form>
+</div>
