@@ -3,7 +3,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-20">Times</h1>
+    <h1 class="display-20">TimesTable</h1>
 </div>
 
 <div>
@@ -19,7 +19,7 @@
         <div>
             @for(int a = 1; a < 13; a++)
             {
-                <p>@ViewBag.result</p>
+                <p>@ViewBag.result * @a = @(ViewBag.result * a)</p>
             }
         </div>
     }
