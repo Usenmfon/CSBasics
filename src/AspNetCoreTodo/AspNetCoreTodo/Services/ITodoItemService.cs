@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using Models;
+using AspNetCoreTodo.Models;
 
-namespace Services
+namespace AspNetCoreTodo.Services
 {
     public interface ITodoItemService
     {
-        Task<TodoItem[]> GetIncompleteAsync();
+        Task<TodoItem[]> GetIncompleteItemsAsync();
     }
 }

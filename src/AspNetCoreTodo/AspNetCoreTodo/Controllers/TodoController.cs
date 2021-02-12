@@ -9,6 +9,7 @@ namespace AspNetCoreTodo.Controllers
             //Get data from db
             //put items into model
             //render a view
+            return View();
         }
     }
 }
