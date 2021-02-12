@@ -6,6 +6,7 @@
     <h1 class="display-20">TimesTable</h1>
 </div>
 
+<p>For Single Table//Multi-Table</p>
 <div>
     <form asp-controller="Calc" asp-action="TimesT" method="POST">
     <input type="number" placeholder="number" name="i">
@@ -13,7 +14,7 @@
     </form>
 </div>
 
-@{
+@* @{
     if(ViewBag.result != null)
     {
         <div>
@@ -23,4 +24,29 @@
             }
         </div>
     }
+} *@
+
+@{
+    if(ViewBag.result != null)
+    {
+        <div>
+            @for(int a = 1; a < 13; a++)
+            {
+                @for(int b=1; b <= @ViewBag.result; b++)
+                {
+                    @if(b <= @ViewBag.result - 1)
+                    {
+                        <p>@b * @a = @(b * a)</p>
+                    }
+                    else
+                    {
+                        <p>@b * @a = @(b * a)</p>
+                    }
+                    <br />
+                }
+            }
+        </div>
+    }
 }
+
+<p>For Multi-table</p>
