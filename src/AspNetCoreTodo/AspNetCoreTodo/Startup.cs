@@ -12,6 +12,7 @@ using AspNetCoreTodo.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using AspNetCoreTodo.Services;
 
 namespace AspNetCoreTodo
 {
@@ -34,6 +35,7 @@ namespace AspNetCoreTodo
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddSingleton<ITodoItemService, FakeTodoItemService>();
             services.AddControllersWithViews();
         }
 
