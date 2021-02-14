@@ -35,7 +35,7 @@ namespace AspNetCoreTodo
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddSingleton<ITodoItemService, TodoItemService>();
+            services.AddScoped<ITodoItemService, TodoItemService>();
             services.AddControllersWithViews();
         }
 
