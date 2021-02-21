@@ -26,6 +26,12 @@ namespace AspNetCoreTodo.Services
                 DueAt = DateTimeOffset.Now.AddDays(3)
             };
 
+            var item4 = new TodoItem
+            {
+                Title = "Course commence",
+                DueAt = DateTimeOffset.Now.AddDays(5)
+            };
+
             return Task.FromResult(new[] { item1, item2, item3 });
         }
     }
