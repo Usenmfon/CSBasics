@@ -50,7 +50,13 @@ namespace AspNetCoreTodo.Services
                 DueAt = DateTimeOffset.Now.AddDays(5)
             };
 
-            return Task.FromResult(new[] { item1, item2, item3, item4, item5, item6, item7 });
+            var item8 = new TodoItem
+            {
+                Title = "Reiterating...",
+                DueAt = DateTimeOffset.Now.AddDays(5)
+            };
+
+            return Task.FromResult(new[] { item1, item2, item3, item4, item5, item6, item8 });
         }
     }
 }
