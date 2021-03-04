@@ -20,55 +20,8 @@ namespace AspNetCoreTodo.Services
                 DueAt = DateTimeOffset.Now.AddDays(2)
             };
 
-            var item3 = new TodoItem
-            {
-                Title = "Zuri Team",
-                DueAt = DateTimeOffset.Now.AddDays(3)
-            };
-
-            var item4 = new TodoItem
-            {
-                Title = "Course commence",
-                DueAt = DateTimeOffset.Now.AddDays(5)
-            };
-
-            var item5 = new TodoItem
-            {
-                Title = "Reiterating...",
-                DueAt = DateTimeOffset.Now.AddDays(5)
-            };
-
-            var item6 = new TodoItem
-            {
-                Title = "Reiterating...",
-                DueAt = DateTimeOffset.Now.AddDays(5)
-            };
-
-            var item7 = new TodoItem
-            {
-                Title = "Reiterating...",
-                DueAt = DateTimeOffset.Now.AddDays(5)
-            };
-
-            var item8 = new TodoItem
-            {
-                Title = "Reiterating...",
-                DueAt = DateTimeOffset.Now.AddDays(5)
-            };
-
-            var item9 = new TodoItem
-            {
-                Title = "Reiterating...",
-                DueAt = DateTimeOffset.Now.AddDays(5)
-            };
-
-            var item10 = new TodoItem
-            {
-                Title = "Reiterating...",
-                DueAt = DateTimeOffset.Now.AddDays(5)
-            };
-
-            return Task.FromResult(new[] { item1, item2, item3, item4, item5, item6, item8, item9, item10 });
+            
+            return Task.FromResult(new[] { item1, item2 });
         }
     }
 }
