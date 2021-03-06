@@ -20,8 +20,14 @@ namespace AspNetCoreTodo.Services
                 DueAt = DateTimeOffset.Now.AddDays(2)
             };
 
+            var item3 = new TodoItem
+            {
+                Title = "Another excuse",
+                DueAt = DateTimeOffset.Now.AddDays(2)
+            };
+
             
-            return Task.FromResult(new[] { item1, item2 });
+            return Task.FromResult(new[] { item1, item2, item3 });
         }
     }
 }
