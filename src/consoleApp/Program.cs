@@ -26,19 +26,25 @@ namespace consoleApp
             // post.Text = postText;
             // post.ShowPost();
             // #endregion
-            string continueToRun;
-           do
-           {
-               Console.Write("Enter year: ");
-               int year = int.Parse(Console.ReadLine());
-               IsLeapYear(year);
-               Console.Write("Do you want to continue Y/N ? :");
-               continueToRun = Console.ReadLine();
-           }while(continueToRun != "N");
-        }
-        static void IsLeapYear(int year)
+        //     string continueToRun;
+        //    do
+        //    {
+        //        Console.Write("Enter year: ");
+        //        int year = int.Parse(Console.ReadLine());
+        //        IsLeapYear(year);
+        //        Console.Write("Do you want to continue Y/N ? :");
+        //        continueToRun = Console.ReadLine();
+        //    }while(continueToRun != "N");
+        Random rand  = new Random();
+        for(int i = 1; i <= 10; i++)
         {
-            Console.WriteLine(DateTime.IsLeapYear(year));
+            int randomNumber = rand.Next(100,200);
+            Console.Write($"{randomNumber} ");
         }
+        }
+        // static void IsLeapYear(int year)
+        // {
+        //     Console.WriteLine(DateTime.IsLeapYear(year));
+        // }
     }
 }
