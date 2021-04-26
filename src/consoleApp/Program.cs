@@ -35,12 +35,7 @@ namespace consoleApp
         //        Console.Write("Do you want to continue Y/N ? :");
         //        continueToRun = Console.ReadLine();
         //    }while(continueToRun != "N");
-        Random rand  = new Random();
-        for(int i = 1; i <= 10; i++)
-        {
-            int randomNumber = rand.Next(100,200);
-            Console.Write($"{randomNumber} ");
-        }
+        Console.WriteLine(DateTime.Today.DayOfWeek);
         }
         // static void IsLeapYear(int year)
         // {
