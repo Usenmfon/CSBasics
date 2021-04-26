@@ -4,7 +4,7 @@ namespace consoleApp
 {
     class Post
     {
-        string text;
+        private string text;
         public Post()
         {
             Console.WriteLine("New post");
